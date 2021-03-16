@@ -16,7 +16,7 @@ var studente = {
 }
 console.log("Studente: " + studente);
 // ciclo e stampo tutte le proprietà dell'oggetto studente
-for (var studenteKey in studente) {
+for (var studenteKey in studente){
 console.log(studenteKey + ": " +  studente[studenteKey]);
 }
 // creo un array di oggetti di studenti
@@ -51,7 +51,26 @@ var studenti = [
 studenti.push(studente);
 console.log(studenti);
 // ciclo e stampo per ogni studente il nome e cognome
-for (var i = 0; i < studenti.length; i++) {
+for (var i = 0; i < studenti.length; i++){
 console.log("Nome: " + studenti[i].nome + ", Cognome:" + studenti[i].cognome);
 }
+// al click del pulsante add viene creato un nuovo oggetto studente
+// che viene pushato in array studenti
+$("#add").click(function(){
+  var nome = $("#nome").val();
+  var cognome = $("#cognome").val();
+  var eta = parseInt($("#eta").val());
+
+  var studenteNuovo = {
+    nome : nome,
+    cognome : cognome,
+    eta : eta,
+  }
+  // pusho il nuovo oggetto nell'array studenti
+  studenti.push(studenteNuovo);
+  // stampo gli oggetti dell'array studenti
+  for (var i = 0; i < studenti.length; i++){
+  console.log(studenti[i]);
+  }
+});
 });
