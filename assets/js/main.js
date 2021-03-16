@@ -10,10 +10,14 @@
 $(document).ready(function(){
 // creo un oggetto studente e stampo
 var studente = {
-  nome: Giorgio,
-  cognome: Pignattari,
-  età: 26,
+  nome: "Giorgio",
+  cognome: "Pignattari",
+  età: "26",
 }
 console.log(studente);
-
+$('#studente p').text(studente);
+//stampo tutte le proprietà dell'oggetto studente
+for (var studenteKey in studente) {
+console.log(studenteKey, studente[studenteKey]);
+}
 })
