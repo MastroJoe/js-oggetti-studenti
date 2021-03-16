@@ -17,7 +17,7 @@ var studente = {
 console.log("Studente: " + studente);
 // ciclo e stampo tutte le proprietà dell'oggetto studente
 for (var studenteKey in studente) {
-console.log(studenteKey, studente[studenteKey]);
+console.log(studenteKey + ": " +  studente[studenteKey]);
 }
 // creo un array di oggetti di studenti
 var studenti = [
