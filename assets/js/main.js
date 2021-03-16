@@ -14,10 +14,44 @@ var studente = {
   cognome: "Pignattari",
   età: "26",
 }
-console.log(studente);
-$('#studente p').text(studente);
-//stampo tutte le proprietà dell'oggetto studente
+console.log("Studente: " + studente);
+// ciclo e stampo tutte le proprietà dell'oggetto studente
 for (var studenteKey in studente) {
 console.log(studenteKey, studente[studenteKey]);
 }
-})
+// creo un array di oggetti di studenti
+var studenti = [
+{
+  nome : "Pierfrancesco",
+  cognome : "Antonello",
+  eta : "26",
+},
+{
+  nome : "Filippo",
+  cognome : "Bellotto",
+  eta : "25",
+},
+{
+  nome : "Stefano",
+  cognome : "Manea",
+  eta : "30",
+},
+{
+  nome : "Mirko",
+  cognome : "Trevisan",
+  eta : "23",
+},
+{
+  nome : "Alessandro",
+  cognome : "Cavallo",
+  eta : "25",
+}
+];
+// aggiungo studente all'array e stampo
+studenti.push(studente);
+console.log(studenti);
+// ciclo e stampo per ogni studente il nome e cognome
+for (var i = 0; i < studenti.length; i++) {
+console.log("Nome: " + studenti[i].nome + ", Cognome:" + studenti[i].cognome);
+}
+});
